@@ -23,14 +23,16 @@ def processData(client, data):
     data = data.replace("#", "")
     splitData = data.split(":")
     print(splitData)
-    if splitData[1] == "1":
+    if splitData[1] == "001":
         client.publish("sensor_1", splitData[2])
-    if splitData[1] == "2":
+    if splitData[1] == "002":
         client.publish("sensor_2", splitData[2])
-    if splitData[1] == "3":
+    if splitData[1] == "003":
         client.publish("sensor_3", splitData[2])
-    if splitData[1] == "4":
+    if splitData[1] == "004":
         client.publish("sensor_4", splitData[2])
+    if splitData[1] == "005":
+        client.publish("sensor_5", splitData[2])
 
 mess = ""
 def readSerial(client):
